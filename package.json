@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
     "vue": "^2.6.6"
   },
   "devDependencies": {

@@ -1,33 +1,36 @@
 <template>
   <div class="wrapper1">
-    <div class="element">
-      你好，我是 Component 1
-    </div>
-    <part1></part1>
-    <part2></part2>
+    <c-process :config="config" />
   </div>
 </template>
 
 <script>
-import part1 from './parts/part1.vue';
-import part2 from './parts/part2.vue';
 
 export default {
-  name: 'Component1',
-  components: {
-    part1,
-    part2,
+  components:{
+    'c-process':require('./parts/process-circle').default
   },
-};
-</script>
-<style>
-  .wrapper1 .element {
-    width: 100px;
-    height: 100px;
-    background: orangered;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  data () {
+    return {
+      config: {
+        'start': 0.15, // 圆弧起点
+        'end': 0.85, // 圆弧终点
+        'process': 20, // 当前进度  // 取值范围1〜100
+        'processShow': true, // 是否显示进度数字
+        'lineWidth': 30, // 线条宽度
+        'lineCap': 'round', // 线帽方式
+        'during': 1000, // 动画持续时长
+        'wrap': {
+          width: 800, // 画板宽度
+          height: 800// 画板高度
+        },
+        'gradient': {
+          start: 'rgba(251,197,34,1)', // 弧形渐变色起点色
+          end: 'rgba(251,197,34,0.3)'// 弧形渐变色终点色
+        }
+      }
+    }
   }
-</style>
+
+}
+</script>
