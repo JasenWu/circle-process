@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Component1 from './components/Component1.vue';
+import Component1 from './components/Component.vue';
 
 export default {
   name: 'app',

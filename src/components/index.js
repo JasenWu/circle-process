@@ -1,4 +1,4 @@
-import Component1 from './Component1.vue';
+import Component1 from './Component.vue';
 
 Component1.install = Vue => Vue.component(Component1.name, Component1);
 
